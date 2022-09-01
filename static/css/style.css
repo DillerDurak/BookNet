@@ -1,0 +1,164 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+
+.header__image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.header__image svg{
+    margin: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input{
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    width: 100%;
+    background: 0 0;
+    color: white;
+    position: relative;
+    transition: border 0.5s ease;
+    font-size: 1.2rem;
+}
+
+.content{
+    width: 90%;
+    margin-bottom: auto;
+}
+
+.btn{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    background-color: white;
+    color: #555;
+    padding: 13px 30px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.box, .box_2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(to top,#7579ff,#b224ef);
+    border-radius: 15px;
+    padding-top: 50px;
+
+}
+
+.box_2{
+    height: 750px;
+}
+
+.info{
+    font-size: 12px;
+    color: #e5e5e5;
+    margin-bottom: 30px;
+}
+
+.btn:hover{
+    background: linear-gradient(to bottom, #7579ff,#b224ef);
+    color: white;
+    transition: all 0.4s linear;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.input:focus{
+    outline: none;
+    border-bottom: 2px solid white;
+
+}
+
+.forgot-psd{
+    text-decoration: none;
+    font-size: 12px;
+    color: #e5e5e5;
+}
+
+.forgot-psd:hover{
+    color: white;
+}
+
+@media only screen and (max-width: 500px){
+    .box{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .box{
+        width: 300px;
+    }
+} 
+
+
+.form__errors{
+    position: relative;
+}
+
+.form input:invalid{
+    animation: shake .3s ease;
+}
+
+.errorlist li{
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 300px;
+    
+
+}
+
+@keyframes shake{
+    25% {transform: translateX(4px)}
+    50% {transform: translateX(-4px)}
+    75% {transform: translateX(4px)}
+}

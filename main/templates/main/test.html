@@ -1,0 +1,31 @@
+{%extends 'main/base.html'%}
+
+{%block content%}
+
+    <h1>{{user.username|title}}'s book collection </h1>
+
+    <div class="book__list">
+        {% for book in books%}
+        <div class="new-book_item">
+            <div class="new-book_img">
+                <a href="#">
+                    <img src="{{book.image}}" alt="" class="img">
+                </a>
+
+            </div>
+
+            <div class="new-book_content">
+                <div class="new-book_title">
+                    <span class="book__title">{{book.title|slice:30}}</span>
+                    <p class="book__category">{{book.category|truncatewords:1}}</p>
+                </div>
+                <a href="#" class="new-book_add" id="item-{{book.pk}}">Открыть</a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+
+
+
+{%endblock%}

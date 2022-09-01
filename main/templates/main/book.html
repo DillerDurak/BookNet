@@ -1,0 +1,56 @@
+{%extends 'main/base.html'%}
+{%load static%}
+{%block content%}
+
+
+    <div class="spinner"></div>
+
+
+    <div class="info">
+
+    </div>
+
+    <div class="book__list">
+
+    </div>
+    <button type="button" id="next-page">Next</button>
+
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="popup__close">
+                    <a href="#">&times;</a>
+                </div>
+                
+                <div class="popup__title"></div>
+
+                <div class="popup__wrapper">
+                    <div class="popup__wrapper-content">
+                        <div class="popup__image"></div>   
+                        <div class="popup__wrapper-info">
+                            <div class="popup__author">Authors: </div>
+                            <div class="popup__year">Year of publication: </div>
+                            <div class="popup__category">Category: </div>
+                            <form method="POST" id="form-el">
+                                {%csrf_token%}
+                                <button type="submit" class="popup__btn">Add Book</button>
+                            </form>
+                            
+                        </div>  
+                        
+                    </div>
+                    <div class="popup__text"></div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+<script src="{%static 'js/books.js'%}"></script>
+{%endblock%}
